@@ -47,14 +47,14 @@ class Student {
     }
 
     /**
-     * Print student details. 
+     * Print student details.
      */
     function toString() {
-        $result = $this->first_name . ' ' . $this->surname;
-        $result .= ' ('.$this->average().")\n";
+        $result = '<h5>' . $this->first_name . ' ' . $this->surname;
+        $result .= ' ('.$this->average().")\n" . '</h5><hr>';
         foreach($this->emails as $which=>$what)
-        $result .= $which . ': '. $what. "\n";
-        $result .= "\n";
+            $result .= '<b>' . $which . '</b>' . ': '. $what. "\n";
+            $result .= "\n";
         return '<pre>'.$result.'</pre>';
     }
 
